@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekapitulasi Nilai PAK & Budi Pekerti - Cresto Wilhelm Waha, S. Th.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gmim: {
+                            50: '#f5f0f8',
+                            100: '#e9dbf0',
+                            200: '#d7bce3',
+                            500: '#8e44ad',
+                            600: '#6C3483',
+                            700: '#5B2C6F',
+                            800: '#4a235a',
+                            900: '#381a44',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar for smooth desktop/mobile table scrolling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a29bfe;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6C3483;
+        }
+
+        /* Input spin buttons removal for clean grid view */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        /* Printable optimization */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 10pt;
+            }
+            .print-full {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+            }
+            table {
+                font-size: 8pt;
+            }
+            th, td {
+                padding: 4px 6px !important;
+                border: 1px solid #333 !important;
+            }
+            .print-title {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased selection:bg-gmim-200 selection:text-gmim-900">
+
+    <header class="bg-gradient-to-r from-gmim-800 via-gmim-700 to-gmim-600 text-white shadow-lg relative overflow-hidden no-print">
+        <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none transform rotate-12">
+            <!-- Large watermark logo background -->
+            <svg class="w-96 h-96" viewBox="0 0 200 200" fill="currentColor">
+                <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="8" fill="none"/>
+                <path d="M100 20 L120 70 L170 70 L130 100 L150 150 L100 120 L50 150 L70 100 L30 70 L80 70 Z" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <!-- Brand & Teacher Profile -->
+                <div class="flex items-center space-x-4">
+                    <!-- Integrated GMIM Logo (Burung Manguni Rendered SVG) -->
+                    <div class="bg-white p-2.5 rounded-2xl shadow-md border-2 border-gmim-200 shrink-0 transform hover:scale-105 transition duration-300">
+                        <svg class="w-12 h-12 md:w-16 md:h-16 text-gmim-700" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- GMIM Outer Blue Circle Border -->
+                            <circle cx="100" cy="100" r="92" stroke="#6C3483" stroke-width="8" fill="#FFFFFF"/>
+                            <circle cx="100" cy="100" r="82" stroke="#5B2C6F" stroke-width="3" stroke-dasharray="6 4"/>
+                            
+                            <!-- Cross Symbol background -->
+                            <rect x="92" y="25" width="16" height="150" fill="#E67E22" rx="3"/>
+                            <rect x="35" y="65" width="130" height="16" fill="#E67E22" rx="3"/>
+
+                            <!-- Stylized Burung Manguni (Owl) Body & Wings -->
+                            <path d="M 60,110 Q 100,80 140,110 Q 150,150 100,175 Q 50,150 60,110 Z" fill="#2C3E50" />
+                            <path d="M 70,115 Q 100,95 130,115 Q 135,145 100,165 Q 65,145 70,115 Z" fill="#FFFFFF" />
+                            
+                            <!-- Manguni Eyes -->
+                            <circle cx="82" cy="115" r="12" fill="#F1C40F" stroke="#2C3E50" stroke-width="2"/>
+                            <circle cx="118" cy="115" r="12" fill="#F1C40F" stroke="#2C3E50" stroke-width="2"/>
+                            <circle cx="82" cy="115" r="5" fill="#000000"/>
+                            <circle cx="118" cy="115" r="5" fill="#000000"/>
+
+                            <!-- Beak -->
+                            <polygon points="100,118 94,128 106,128" fill="#E67E22"/>
+
+                            <!-- Feather details -->
+                            <path d="M 85,135 Q 100,145 115,135" stroke="#2C3E50" stroke-width="2" fill="none"/>
+                            <path d="M 88,145 Q 100,153 112,145" stroke="#2C3E50" stroke-width="2" fill="none"/>
+
+                            <!-- Olive Branch / Base -->
+                            <path d="M 45,160 Q 100,185 155,160" stroke="#27AE60" stroke-width="5" stroke-linecap="round" fill="none"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-gmim-500/40 text-purple-100 border border-purple-300/30 mb-1">
+                            Sistem Rekapitulasi Nilai Digital
+                        </div>
+                        <h1 class="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-white">
+                            Pendidikan Agama Kristen & Budi Pekerti
+                        </h1>
+                        <p class="text-sm md:text-base text-purple-100 mt-1 flex items-center gap-2">
+                            <span>Guru Pengampu:</span>
+                            <strong class="text-white text-base md:text-lg font-bold underline decoration-amber-400 decoration-2 underline-offset-4">
+                                Cresto Wilhelm Waha, S. Th.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Access Mode Switcher & Status Badge -->
+                <div class="flex flex-wrap items-center gap-3 bg-gmim-900/40 p-3 rounded-2xl border border-white/10 backdrop-blur-md self-start md:self-auto">
+                    <div class="flex items-center space-x-2">
+                        <span id="role-badge" class="px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-500 text-white shadow-sm flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                            Mode Siswa (Read-Only)
+                        </span>
+                    </div>
+
+                    <button id="btn-toggle-auth" onclick="handleAuthToggle()" class="px-4 py-2 rounded-xl text-xs font-bold transition duration-200 shadow-md flex items-center gap-2 bg-amber-400 text-slate-900 hover:bg-amber-300 active:scale-95">
+                        <svg id="auth-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <span id="auth-btn-label">Login Guru</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hidden print-title p-4 text-center border-b border-slate-300">
+        <h1 class="text-xl font-bold uppercase">REKAPITULASI NILAI PENDIDIKAN AGAMA KRISTEN & BUDI PEKERTI</h1>
+        <p class="text-sm font-semibold mt-1">Guru Pengampu: Cresto Wilhelm Waha, S. Th.</p>
+        <p class="text-xs text-slate-600" id="print-class-title">Kelas: X-A</p>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full">
+        
+        <!-- Controls Bar: Class Navigation Pills & Global Search -->
+        <div class="bg-white rounded-2xl shadow-md border border-slate-200/80 p-4 mb-6 no-print space-y-4">
+            
+            <!-- Class Tabs (Pill Buttons) -->
+            <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Pilih Kelas:</label>
+                <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="class-pills-container">
+                    <!-- Pills injected dynamically -->
+                </div>
+            </div>
+
+            <!-- Toolbar Actions (Search, Export, Add Student, Reset) -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-3 border-t border-slate-100">
+                <!-- Search Input -->
+                <div class="relative flex-grow max-w-md">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="search-input" oninput="handleSearch()" placeholder="Cari nama siswa..." class="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-gmim-600 focus:border-transparent transition">
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <!-- Add Student Button (Teacher Only) -->
+                    <button id="btn-add-student" onclick="openAddStudentModal()" class="hidden px-3.5 py-2 bg-gmim-700 hover:bg-gmim-800 text-white rounded-xl text-xs font-semibold shadow-sm transition flex items-center gap-1.5 active:scale-95">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                        Tambah Siswa
+                    </button>
+
+                    <!-- Export Excel / CSV -->
+                    <button onclick="exportToCSV()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold shadow-sm transition flex items-center gap-1.5 active:scale-95">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Ekspor Excel
+                    </button>
+
+                    <!-- Print / PDF -->
+                    <button onclick="window.print()" class="px-3.5 py-2 bg-slate-700 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold shadow-sm transition flex items-center gap-1.5 active:scale-95">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                        </svg>
+                        Cetak PDF
+                    </button>
+
+                    <!-- Reset Data (Teacher Only) -->
+                    <button id="btn-reset-data" onclick="confirmResetData()" class="hidden px-3.5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-semibold shadow-sm transition flex items-center gap-1.5 active:scale-95">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        Reset Data
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 no-print">
+            <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+                <p class="text-xs font-medium text-slate-500">Total Siswa</p>
+                <p class="text-2xl font-bold text-gmim-700 mt-1" id="stat-total-students">0</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+                <p class="text-xs font-medium text-slate-500">Rata-Rata Kelas</p>
+                <p class="text-2xl font-bold text-emerald-600 mt-1" id="stat-class-avg">0.0</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+                <p class="text-xs font-medium text-slate-500">Nilai Tertinggi</p>
+                <p class="text-2xl font-bold text-blue-600 mt-1" id="stat-max-score">0</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+                <p class="text-xs font-medium text-slate-500">Nilai Terendah</p>
+                <p class="text-2xl font-bold text-amber-600 mt-1" id="stat-min-score">0</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 overflow-hidden print-full">
+            <div class="overflow-x-auto relative">
+                <table class="w-full text-xs text-left text-slate-700 border-collapse">
+                    <thead class="bg-gmim-800 text-white uppercase text-[11px] font-semibold sticky top-0 z-20">
+                        <tr>
+                            <th scope="col" class="py-3 px-2 text-center w-10 border-b border-gmim-900">No</th>
+                            <th scope="col" class="py-3 px-4 min-w-[200px] border-b border-gmim-900 sticky left-0 bg-gmim-800 z-30 shadow-md">Nama Siswa</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T1</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T2</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T3</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T4</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T5</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T6</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T7</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T8</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T9</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 border-b border-gmim-900">T10</th>
+                            <th scope="col" class="py-3 px-1 text-center w-14 bg-purple-900/50 border-b border-gmim-900">Karakter</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 bg-purple-900/50 border-b border-gmim-900">MID</th>
+                            <th scope="col" class="py-3 px-1 text-center w-12 bg-purple-900/50 border-b border-gmim-900">PAS</th>
+                            <th scope="col" class="py-3 px-3 text-center w-20 bg-amber-500 text-slate-900 font-extrabold border-b border-amber-600">Akhir</th>
+                            <th scope="col" class="py-3 px-2 text-center w-16 border-b border-gmim-900 action-header no-print">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" class="divide-y divide-slate-200">
+                        <!-- Dynamic Student Rows -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Empty Search Results Placeholder -->
+            <div id="empty-state" class="hidden py-12 text-center">
+                <svg class="mx-auto h-12 w-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <h3 class="mt-2 text-sm font-medium text-slate-900">Tidak ada nama siswa ditemukan</h3>
+                <p class="mt-1 text-xs text-slate-500">Coba ubah kata kunci pencarian Anda.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500 no-print">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-medium text-slate-700">© Sistem Rekapitulasi Nilai Pendidikan Agama Kristen dan Budi Pekerti</p>
+            <p class="mt-1">Diampu oleh: <strong class="text-gmim-700">Cresto Wilhelm Waha, S. Th.</strong></p>
+        </div>
+    </footer>
+
+    <!-- Password Auth Modal -->
+    <div id="auth-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl border border-slate-100 max-w-sm w-full p-6 transform transition-all">
+            <div class="text-center mb-5">
+                <div class="w-12 h-12 bg-gmim-100 text-gmim-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">Otentikasi Mode Guru</h3>
+                <p class="text-xs text-slate-500 mt-1">Masukkan kata sandi khusus untuk mengaktifkan fitur edit.</p>
+            </div>
+            
+            <form onsubmit="handleAuthSubmit(event)">
+                <div class="mb-4">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Kata Sandi Guru</label>
+                    <input type="password" id="teacher-password" required placeholder="Masukkan kata sandi..." class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gmim-600 focus:border-transparent">
+                    <p id="auth-error" class="text-rose-500 text-xs mt-1.5 hidden font-medium">Kata sandi salah! Silakan coba lagi.</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button type="button" onclick="closeAuthModal()" class="w-1/2 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition">Batal</button>
+                    <button type="submit" class="w-1/2 py-2.5 bg-gmim-700 hover:bg-gmim-800 text-white rounded-xl text-xs font-semibold transition">Masuk Mode Guru</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Student Modal -->
+    <div id="add-student-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl border border-slate-100 max-w-sm w-full p-6">
+            <h3 class="text-lg font-bold text-slate-800 mb-1">Tambah Siswa Baru</h3>
+            <p class="text-xs text-slate-500 mb-4">Siswa akan ditambahkan ke <span id="add-student-class-label" class="font-bold text-gmim-700"></span></p>
+            
+            <form onsubmit="handleAddStudentSubmit(event)">
+                <div class="mb-4">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Nama Lengkap Siswa</label>
+                    <input type="text" id="new-student-name" required placeholder="NAMA LENGKAP SISWA" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-sm uppercase focus:outline-none focus:ring-2 focus:ring-gmim-600 focus:border-transparent">
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button type="button" onclick="closeAddStudentModal()" class="w-1/2 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition">Batal</button>
+                    <button type="submit" class="w-1/2 py-2.5 bg-gmim-700 hover:bg-gmim-800 text-white rounded-xl text-xs font-semibold transition">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Student Name Modal -->
+    <div id="edit-student-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl border border-slate-100 max-w-sm w-full p-6">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">Ubah Nama Siswa</h3>
+            
+            <form onsubmit="handleEditStudentSubmit(event)">
+                <input type="hidden" id="edit-student-id">
+                <div class="mb-4">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Nama Siswa</label>
+                    <input type="text" id="edit-student-name" required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-sm uppercase focus:outline-none focus:ring-2 focus:ring-gmim-600 focus:border-transparent">
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button type="button" onclick="closeEditStudentModal()" class="w-1/2 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition">Batal</button>
+                    <button type="submit" class="w-1/2 py-2.5 bg-gmim-700 hover:bg-gmim-800 text-white rounded-xl text-xs font-semibold transition">Perbarui Nama</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Message Box -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-2xl text-xs font-semibold hidden z-50 flex items-center space-x-2 border border-slate-700">
+        <span id="toast-message">Notifikasi</span>
+    </div>
+
+    <script>
+        // Default initial database definition
+        const INITIAL_ROSTERS = {
+            "X-A": [
+                "AURELHYA TEMBER", "BENIGNO AZRAEL SOMPOTAN", "BILLY YOEL A.ZEBUA", "BIMA FILIPI TAMBARITJI",
+                "CHEYRIN INJILIA BAWOTONG", "EDELSTEIN JERYCHO AREROS", "FELISYA ANGGREINI LONGADI", "FHARLEINE LOVE BRITANY GIOH",
+                "FIDY FLEYNI WENAS", "GEORGE MICHAEL AUGUSTIVO WANGKA", "GIORGINO HIZKIA LOLARO", "GRACIA WINDIA GUSTI",
+                "IMANUELA DJAPAI", "JEREMY ANDREAN SAROINSONG", "JULIANTI MAKANGIRAS", "KINSEN PODOI",
+                "KRIS MANUEL TODINGBUA", "MARVEL GIDEON MUTAHANG", "MERRYNE NAZZARI WIJAYA", "MICHELLE JENIFER LOIWATU",
+                "NADIA DELOVA AMAR", "RAFAEL WILIAM MONAREH", "REGEN HANDIKA IMANUEL RUMONDOR", "REVALDI VANHEISBERT LANGUJU",
+                "RIKO FALENTINO PONTOH", "STINLY ROLAN LALAMENTIK", "THERESIA RUTH CLAUDIA NGADE", "YIZREEL FREDELYA MAKASIAHE"
+            ],
+            "X-B": [
+                "ALVIANA SILVANA KATANGGUNG", "ANDRE AGUSTINUS NONGKA", "ANGGI STEIBI NAPA", "CHRISTIAN IMANUEL LOPE NAMOTEMO",
+                "CHYLA MITA RINA PATRAS", "CLAREN JOSUA SENDEWANA", "DANIEL RICARDO BINTANG", "EDWARD ALFRITS JUSUF TOLOLIU",
+                "EUAGGELION PETRA WATULINGKAS", "FEBIOLA KAKOTI", "GRASILIO KAMBEY", "GRESYA SUBU",
+                "JEREMY KEFAS KASUSA", "JHONATAN GABRIEL PINONTOAN", "KEISITA WONGKAR", "LEONEL NATANAEL YABARMASE",
+                "LIKIA LION TILAAR", "LOURENS G MAMANGKEY", "MANO FRISILIA PEA", "MARSELLA SOFICE FREDERIKA",
+                "MESYHA VIRGINIA HIDAYAT", "MISIA THESA PATEH", "NAJWA TULJANAH DAMRIN", "PRISKILA ANASTASYA BUDIMAN",
+                "RAFAEL ALESSANDRO PATEH", "REILAND DIAMANTI", "SELLOMITHA AYANG", "Jeslino Lotjiml"
+            ],
+            "X-C": [
+                "ABRIELLE AMELIA NOVRENSI WARSITO", "AVRIL KASIH ALSTANTI TINONDIGHANG", "CHRISTIAN KENZHU MANTHOL", "CHRISTO DEO MAMOGA",
+                "DIVIE SUGIYANTO", "ELRAPHA AGRACIELO MAWUNTU", "GRACHIA MARCHELINA MONINGKA", "GRACIO MISIT BAWONE",
+                "GRAY JEREMIA KALIMPUNG", "HARRY MORDEKHAI HAMEL", "JONATHAN ALDO PAPUAS", "KEJHORA TIFANY LANTANG",
+                "KEREN PINGKAN ANSAR", "KHANZA GABRIELA TAMPI", "LINCOLIN IMMANUEL NASICH", "LIVIA OKTAVIA GERUNGAN",
+                "LORENZO HOPKINS YONATAN LENGKONG", "LORENZO RIKNES MANDAK", "MARSYALINA INJILIA TUWO", "NANDA SAPUTRA SAMBAULU",
+                "NOFRAN MARSEL SIPIRE", "RENA REVITA SASAMU", "ROLLAND PIETER SAJOW", "SYAHRUL AMURAINI",
+                "VERON EVAN NATANAEL NATARY", "YULISTRI C. MAKAWIMBANG", "KEYKO NIKITA CINTARANI BOLANG"
+            ],
+            "X-D": [
+                "AGIN BASKORO SUSANTO", "APSINTUS BINGE ALEX TOII", "BRIAN JESA SAJANGBATI", "CALVIN TOYANG",
+                "CHRISANDO APRILIANO", "CHRISYAN MIRACLE SINDUA", "DEANDRA CAREN RUMOKOY", "DELON TENDA",
+                "ELISABET ANASTASYA LAPIAN", "ESTER FLORAH AGUSTIN MANGIMBULUR", "FELOVELY KIZZYAMITHA SIGAR", "GICELLA KIRANY MODOH",
+                "GILBERTI NATANAEL PATEH", "GRACIA FREDERIKA GARANDE", "HEARLYNG MIRACLE MAMANGKEY", "HERLANGGA RICHARD KOAGOUW",
+                "IBRANI HIZKIA EFRAIM SARBINI", "JOVINKA ANABELLA PAULINE MANGKEY", "JOZUA CLEVO BAUREH", "MIGUELLE EZRA VAN'BERN WUISAN",
+                "MIKAEL HERWANDI ALELO", "MITYU CLEY MAMAHIT", "NATHANAEL GRACIO WOWILING", "QIAHNO MOKALU",
+                "QIMBHERLY LIVIA MARAMIS", "STIFFANY CLAUDYA DATU", "SWARADIKA JUSTICIO OMBONG", "YOAN MARANATHA MUDENG"
+            ],
+            "XI-A": [
+                "CHARYN YVAINE MAKIKAMA", "DESWITA PAULA MAMARASI", "GIRELLY CANSELINO MICHAEL KENAP", "GLORIA NATALIA DALUWU",
+                "INJILIA GRACIA WATUPONGOH", "JANSSEN RAJA MANURUNG", "JULIA KABURUANG", "KEISYA IMANUELA MANSAMAEKA",
+                "KEISYA YULIS", "KEREN JESSICA TUWO", "LEONARDO DIEGO LOIWATU", "MEYLIA E. L. MONINGKA",
+                "MISHIRO DEBORA MAKALEW", "MUTIARA VIRGINIA CARRY BLESSING KANTOHE", "NAYSELLA EVANIA SALAUHIANG", "NOVALIA HOLLY HALAN ENIEL LABANGE",
+                "PAULA FELIXA KRISANI YENGMEN", "PRINCES GENOVIA UMBOH", "PRINCESS HANNA KALALO", "RAFFA GRATYA DATUAGE",
+                "ROSIS NINTANG PIJOH", "RUT PRISKILA BR BANGUN", "TESALONIKA DIAN KUHUWAEL", "VELLYCIA AQUILA TICOALU ALELO",
+                "YUAN BAWUKA", "EDWARD SAMUEL ISRAEL", "APRILIANO CHRISTIANTHO KERAP", "JULIO MARCELLO MAKALEW PANANGGUNG",
+                "IMANUEL ZAKHARIA SENGKEY", "SWINGLY ADAM", "MICHAEL ALBERTO SEROY KAWENGIAN"
+            ],
+            "XI-B": [
+                "ARDILA ADOLFINA LEKAWAEL", "CHELSEA MIKHAELA KAROUW", "CHRISTODECREE S. J. WOLLAH", "DAVE THIMOTY HADY",
+                "EKLESIA REBECCA RENGKU", "ELISA CHERI KENDUNG", "EVELYN HELLENA RIVAI", "EVELYN ROGI",
+                "FLAVIA MASAMBE", "GHISELA OLVIEN SASIKOME", "INDAH AURELIA TOMAYAHU", "JEANNET JACHKLIN LENGKONG",
+                "JENI ALISYA MARODE", "JIMMY RIZKY KAPEL", "JIRHAN DAPAUNTUNG", "KEYKO KEYLEN JEVIANA TUMANDUK",
+                "LETICIA GLORYFI MANGOLE", "NENCY CHARISA PUTRI BARAUNTU", "NEZHA JELITA GLORY UHING", "NIKITA ANUGERAH SURIAWAN",
+                "PRINCE VVINZKY TRISTAN TUTUROONG", "RAFAEL ALFIANTO YOSUA DOLASE", "RIVAN REYNER PUNEGOH", "VIRGINIA ROSITA KAMBEY",
+                "YOLANDA ANDRELA KASALUHE", "RAYCLIEF EFRAIM FRANKLIN JOCOM", "ARTHUR JORDAN PRASETYO", "JANETI SYALOMITA MANANGKODA"
+            ],
+            "XI-C": [
+                "AGNESIA RUMTHE", "ALLETY AURAH KURAMA", "AMELIA GLORIA KOLENGEN", "ANGEL LAUNE",
+                "ASHLEY MTUPET VIRGINIA HULKIAWAR", "EKLESIA ADELIA WALANGITAN", "EVANGLION CRUITE DIAS", "EVITA FRANSINA TUWATANASSY",
+                "FEHLIN INDRI PELAFU", "GABRIEL SEPTIAN SAMBIRING", "GARY RAFAEL VALENTINO BADOA", "GERRAD SAMUEL TANGKA",
+                "GLORIA ALENA RUNTUWAROW", "GRAVY KONSTAN KARWUR", "GRETCHEN QUEEVGHA LUMANGKUN", "HESKIA CHRISTIAN VURMAN",
+                "IMMANUEL JONATHAN ZEFANYA SANGIAN", "JESSICA CHRISTIANI POLUAN", "JOUVDILA BLESSING MIRACLLY MAKALEW", "KERENHAPUKH JELITA PRISKILA",
+                "KEYFIRA KANANDUAN", "MAIKEL OWEN PANGAU", "MICHAEL YOSUA WATULANGKOW", "MIRACLE S. GLORIA TENGES",
+                "MOSSES HERO DINAR", "MOUREN PRAYSI MALEKE", "NADIN KARISOH", "PRICILIA CAROLINA KALUAS",
+                "REGEN FEBRILY SAMUEL TUSANG", "SILVIA GABRIELLA KATTY AYATANOI", "TRI HENDI PUTRA SILALAHI", "MARK LESTER ABELLA PAREDA"
+            ],
+            "XI-D": [
+                "ALSANDY FRANGKLIN FENDI ROMPIS", "ALVINIO ANGGELINO MANDOLANG", "ANGELICA CLAUDIA SUMUAL", "ANGELINA QUEEN TULANGOW",
+                "AYUMI MEJANDI KELEYAN", "DECROLY INDRA JANA KELESANG", "DEFAN IMANUEL HADJU", "EDCOLE MESSI TAGHURIRI",
+                "FELOVESYA UMBOH", "FEYLA JENIFER KAMASI", "FIDY GERALD SEMUEL SABANARI", "FIRENLI STEVANIE TAKAHINDANGEN",
+                "GABRIEL VOICE PRAYER ROMPAS", "GISELA BAWORANG", "GLEDYS GABRIELA SAMBELORANG", "GLORYA KAYLA RUMENSER",
+                "INDRIANI SASAMU", "JEFNEAL GLENN HARIMISA", "JHEESY WORANG", "JONATAN MARAVES MOLE",
+                "JONATHAN VINCENT WAKULU", "JUNIOR MARTHIN TARAU", "MARCELLA LETICIA ABIGAIL KUMASEH", "NOVELIA GRATCIA HUKUBUN",
+                "PIERRE ISAAC RIYATNO", "TASYA KARINA RUMONDOR", "THIN NIO AU JOENG", "VALENTINO MARTINUS KATUUK",
+                "EBEN YOHANIS SIBY LENGKONG", "ELROY MATTHEW LAMBEY", "YEHEZKIEL MARSEL MAANI"
+            ],
+            "XI-E": [
+                "ALVINO EZRATAKAHINDANGEN", "ANGEL MIE LOHOR MAHALING", "ANGGA OKTRIDAY RANTO", "APRILLIA CHRISMIATI INDA MAHRIT GANGGALI",
+                "BERKATYA ESTER TAINE SONO", "CHRISTMAS KOROWOTJENG", "CHRISTO PORUS MANANGKODA", "CHRISTOVANO A. A. SUMENDA",
+                "EDOUARD STEVANUS GONTHA", "EFATA NOVITA WUISAN", "EKO HERMAWAN PRIYONO", "GERAL KUESO",
+                "HERCIKA YUALIN SONOTOK", "IRVAN OTNIEL EPRAFRAS HORMAN", "JEHESKHIEL ALDIANO INIESTA WAROKKA", "JIBRAIL YOHANES MARVELINO SAHABAT",
+                "JONATHAN LIONEL SIPAHUTAR", "JORDAN NATAL REFA PANDEY", "KINAN JERSEY DACOSTA", "KRISTOVEL NEHEMIA JOSEP KUESO",
+                "MARKUS TOMBENG", "MARVELEUS CHRISTIAN RANGINGISAN", "MICHAEL MIMIKA MASSIE", "OLIFIA HAMA",
+                "QUEENNSLLY MESSIANIC KARINGIN", "RAFAEL AMBAT", "RALVI MANIMUUDA", "SEPTIAN ELISA JUNIOR BERHITU",
+                "VARRIL YOCOM NOVARIANTO", "YEDHELLIO F. BERHIMPONG", "YULVIEN LUMEOHE", "MICHAEL ALBERTO SEROY KAWENGIAN", "ANGELA P. KONENG"
+            ]
+        };
+
+        // Application State
+        let db = {};
+        let activeClass = "X-A";
+        let isTeacherMode = false;
+        let searchQuery = "";
+
+        window.onload = function() {
+            initData();
+            renderClassPills();
+            renderTable();
+        };
+
+        function initData() {
+            const savedData = localStorage.getItem("PAK_REKAP_DB_V1");
+            if (savedData) {
+                try {
+                    db = JSON.parse(savedData);
+                } catch (e) {
+                    console.error("Error parsing local storage", e);
+                    db = generateDefaultDB();
+                }
+            } else {
+                db = generateDefaultDB();
+            }
+        }
+
+        function generateDefaultDB() {
+            const newDb = {};
+            for (const [className, students] of Object.entries(INITIAL_ROSTERS)) {
+                newDb[className] = students.map((name, index) => ({
+                    id: 'std_' + className + '_' + index + '_' + Date.now(),
+                    name: name,
+                    scores: {
+                        T1: null, T2: null, T3: null, T4: null, T5: null,
+                        T6: null, T7: null, T8: null, T9: null, T10: null,
+                        Karakter: null, Mid: null, PAS: null
+                    }
+                }));
+            }
+            return newDb;
+        }
+
+        function saveData() {
+            localStorage.setItem("PAK_REKAP_DB_V1", JSON.stringify(db));
+        }
+
+        function renderClassPills() {
+            const container = document.getElementById("class-pills-container");
+            container.innerHTML = "";
+
+            Object.keys(db).forEach(className => {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.onclick = () => switchClass(className);
+
+                if (className === activeClass) {
+                    btn.className = "px-4 py-2 rounded-xl text-xs font-bold bg-gmim-700 text-white shadow-md border border-gmim-800 transition transform scale-105 shrink-0";
+                } else {
+                    btn.className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition shrink-0";
+                }
+                btn.textContent = `Kelas ${className}`;
+                container.appendChild(btn);
+            });
+
+            document.getElementById("print-class-title").textContent = `Kelas: ${activeClass}`;
+        }
+
+        function switchClass(className) {
+            activeClass = className;
+            renderClassPills();
+            renderTable();
+        }
+
+        function calculateFinalScore(scores) {
+            // Tugas average (T1 - T10)
+            let tugasSum = 0;
+            let tugasCount = 0;
+            for (let i = 1; i <= 10; i++) {
+                const val = scores[`T${i}`];
+                if (val !== null && val !== "" && !isNaN(val)) {
+                    tugasSum += parseFloat(val);
+                    tugasCount++;
+                }
+            }
+            const avgTugas = tugasCount > 0 ? (tugasSum / tugasCount) : null;
+
+            const valKarakter = (scores.Karakter !== null && scores.Karakter !== "") ? parseFloat(scores.Karakter) : null;
+            const valMid = (scores.Mid !== null && scores.Mid !== "") ? parseFloat(scores.Mid) : null;
+            const valPas = (scores.PAS !== null && scores.PAS !== "") ? parseFloat(scores.PAS) : null;
+
+            // Arithmetic average of all entered non-null components
+            const validComponents = [];
+            if (avgTugas !== null) validComponents.push(avgTugas);
+            if (valKarakter !== null) validComponents.push(valKarakter);
+            if (valMid !== null) validComponents.push(valMid);
+            if (valPas !== null) validComponents.push(valPas);
+
+            if (validComponents.length === 0) return null;
+
+            const sum = validComponents.reduce((acc, curr) => acc + curr, 0);
+            return (sum / validComponents.length).toFixed(1);
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById("table-body");
+            const emptyState = document.getElementById("empty-state");
+            tbody.innerHTML = "";
+
+            const studentList = db[activeClass] || [];
+            
+            // Filter by search term
+            const filtered = studentList.filter(s => 
+                s.name.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+
+            if (filtered.length === 0) {
+                emptyState.classList.remove("hidden");
+            } else {
+                emptyState.classList.add("hidden");
+            }
+
+            let classScores = [];
+
+            filtered.forEach((student, idx) => {
+                const tr = document.createElement("tr");
+                tr.className = "hover:bg-purple-50/40 transition border-b border-slate-100";
+
+                const finalScore = calculateFinalScore(student.scores);
+                if (finalScore !== null) classScores.push(parseFloat(finalScore));
+
+                // No Column
+                const tdNo = `<td class="py-2.5 px-2 text-center font-medium text-slate-500">${idx + 1}</td>`;
+
+                // Student Name Column
+                const tdName = `
+                    <td class="py-2.5 px-4 font-semibold text-slate-800 sticky left-0 bg-white z-10 shadow-sm border-r border-slate-100">
+                        <div class="flex items-center justify-between group">
+                            <span class="uppercase tracking-tight text-xs">${student.name}</span>
+                            ${isTeacherMode ? `
+                                <button onclick="openEditStudentModal('${student.id}', '${student.name.replace(/'/g, "\\'")}')" title="Ubah Nama" class="opacity-0 group-hover:opacity-100 p-1 text-slate-400 hover:text-gmim-700 transition no-print">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                                </button>
+                            ` : ''}
+                        </div>
+                    </td>
+                `;
+
+                // 10 Tasks Columns Inputs
+                let tdTasks = "";
+                for (let i = 1; i <= 10; i++) {
+                    const key = `T${i}`;
+                    const val = student.scores[key] !== null ? student.scores[key] : "";
+                    tdTasks += `
+                        <td class="py-1 px-1 text-center">
+                            <input type="number" min="0" max="100" step="1" 
+                                value="${val}" 
+                                placeholder="-" 
+                                ${!isTeacherMode ? 'readonly' : ''}
+                                onchange="handleScoreChange('${student.id}', '${key}', this.value)"
+                                class="w-full text-center py-1.5 rounded-md border ${val !== "" ? 'border-purple-300 bg-purple-50/50 font-bold text-gmim-900' : 'border-slate-200 bg-slate-50/50 text-slate-400'} text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-gmim-600 focus:border-transparent transition ${!isTeacherMode ? 'cursor-default' : ''}">
+                        </td>
+                    `;
+                }
+
+                // Character, Mid, PAS
+                const createSpecialInput = (key, bgColor) => {
+                    const val = student.scores[key] !== null ? student.scores[key] : "";
+                    return `
+                        <td class="py-1 px-1 text-center ${bgColor}">
+                            <input type="number" min="0" max="100" step="1" 
+                                value="${val}" 
+                                placeholder="-" 
+                                ${!isTeacherMode ? 'readonly' : ''}
+                                onchange="handleScoreChange('${student.id}', '${key}', this.value)"
+                                class="w-full text-center py-1.5 rounded-md border ${val !== "" ? 'border-gmim-500 bg-white font-bold text-gmim-800' : 'border-slate-200 bg-slate-50 text-slate-400'} text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-gmim-600 focus:border-transparent transition ${!isTeacherMode ? 'cursor-default' : ''}">
+                        </td>
+                    `;
+                };
+
+                const tdKarakter = createSpecialInput("Karakter", "bg-purple-50/30");
+                const tdMid = createSpecialInput("Mid", "bg-purple-50/30");
+                const tdPas = createSpecialInput("PAS", "bg-purple-50/30");
+
+                // Final Accumulated Score Column
+                const scoreColor = finalScore === null ? 'text-slate-400 font-normal' : (parseFloat(finalScore) >= 75 ? 'text-emerald-700 font-extrabold' : 'text-amber-700 font-extrabold');
+                const tdFinal = `
+                    <td class="py-2.5 px-3 text-center bg-amber-50/60 font-bold text-xs ${scoreColor} border-l border-r border-amber-200">
+                        ${finalScore !== null ? finalScore : '-'}
+                    </td>
+                `;
+
+                // Actions Column (Delete Student in Teacher mode)
+                const tdActions = `
+                    <td class="py-2.5 px-2 text-center no-print">
+                        ${isTeacherMode ? `
+                            <button onclick="handleDeleteStudent('${student.id}', '${student.name.replace(/'/g, "\\'")}')" title="Hapus Siswa" class="p-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-lg transition active:scale-90">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                            </button>
+                        ` : '<span class="text-slate-300 text-xs">-</span>'}
+                    </td>
+                `;
+
+                tr.innerHTML = tdNo + tdName + tdTasks + tdKarakter + tdMid + tdPas + tdFinal + tdActions;
+                tbody.appendChild(tr);
+            });
+
+            updateClassStatistics(studentList.length, classScores);
+        }
+
+        function updateClassStatistics(totalStudents, finalScores) {
+            document.getElementById("stat-total-students").textContent = totalStudents;
+
+            if (finalScores.length === 0) {
+                document.getElementById("stat-class-avg").textContent = "0.0";
+                document.getElementById("stat-max-score").textContent = "0";
+                document.getElementById("stat-min-score").textContent = "0";
+                return;
+            }
+
+            const sum = finalScores.reduce((a, b) => a + b, 0);
+            const avg = (sum / finalScores.length).toFixed(1);
+            const max = Math.max(...finalScores).toFixed(1);
+            const min = Math.min(...finalScores).toFixed(1);
+
+            document.getElementById("stat-class-avg").textContent = avg;
+            document.getElementById("stat-max-score").textContent = max;
+            document.getElementById("stat-min-score").textContent = min;
+        }
+
+        function handleScoreChange(studentId, key, value) {
+            if (!isTeacherMode) return;
+
+            const student = db[activeClass].find(s => s.id === studentId);
+            if (!student) return;
+
+            let parsed = value.trim() === "" ? null : parseFloat(value);
+            if (parsed !== null) {
+                if (parsed < 0) parsed = 0;
+                if (parsed > 100) parsed = 100;
+            }
+
+            student.scores[key] = parsed;
+            saveData();
+            renderTable();
+            showToast(`Nilai ${key} berhasil diperbarui.`);
+        }
+
+        function handleAuthToggle() {
+            if (isTeacherMode) {
+                // Logout to Student Mode
+                isTeacherMode = false;
+                updateRoleUI();
+                showToast("Berhasil keluar dari Mode Guru.");
+            } else {
+                // Open Password Modal
+                document.getElementById("teacher-password").value = "";
+                document.getElementById("auth-error").classList.add("hidden");
+                document.getElementById("auth-modal").classList.remove("hidden");
+                setTimeout(() => document.getElementById("teacher-password").focus(), 100);
+            }
+        }
+
+        function closeAuthModal() {
+            document.getElementById("auth-modal").classList.add("hidden");
+        }
+
+        function handleAuthSubmit(e) {
+            e.preventDefault();
+            const pass = document.getElementById("teacher-password").value;
+            if (pass === "SMAKERT2") {
+                isTeacherMode = true;
+                closeAuthModal();
+                updateRoleUI();
+                showToast("Mode Guru diaktifkan!");
+            } else {
+                document.getElementById("auth-error").classList.remove("hidden");
+            }
+        }
+
+        function updateRoleUI() {
+            const badge = document.getElementById("role-badge");
+            const btnLabel = document.getElementById("auth-btn-label");
+            const btnAdd = document.getElementById("btn-add-student");
+            const btnReset = document.getElementById("btn-reset-data");
+
+            if (isTeacherMode) {
+                badge.className = "px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-amber-400 text-slate-900 shadow-sm flex items-center gap-1.5";
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-slate-900 animate-pulse"></span> Mode Guru (Full Akses)`;
+                btnLabel.textContent = "Keluar Mode Guru";
+                btnAdd.classList.remove("hidden");
+                btnReset.classList.remove("hidden");
+            } else {
+                badge.className = "px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-500 text-white shadow-sm flex items-center gap-1.5";
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span> Mode Siswa (Read-Only)`;
+                btnLabel.textContent = "Login Guru";
+                btnAdd.classList.add("hidden");
+                btnReset.classList.add("hidden");
+            }
+
+            renderTable();
+        }
+
+        function openAddStudentModal() {
+            document.getElementById("new-student-name").value = "";
+            document.getElementById("add-student-class-label").textContent = `Kelas ${activeClass}`;
+            document.getElementById("add-student-modal").classList.remove("hidden");
+            setTimeout(() => document.getElementById("new-student-name").focus(), 100);
+        }
+
+        function closeAddStudentModal() {
+            document.getElementById("add-student-modal").classList.add("hidden");
+        }
+
+        function handleAddStudentSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById("new-student-name").value.trim().toUpperCase();
+            if (!name) return;
+
+            const newStudent = {
+                id: 'std_' + activeClass + '_' + Date.now(),
+                name: name,
+                scores: {
+                    T1: null, T2: null, T3: null, T4: null, T5: null,
+                    T6: null, T7: null, T8: null, T9: null, T10: null,
+                    Karakter: null, Mid: null, PAS: null
+                }
+            };
+
+            db[activeClass].push(newStudent);
+            saveData();
+            closeAddStudentModal();
+            renderTable();
+            showToast(`Siswa "${name}" berhasil ditambahkan.`);
+        }
+
+        function openEditStudentModal(id, currentName) {
+            document.getElementById("edit-student-id").value = id;
+            document.getElementById("edit-student-name").value = currentName;
+            document.getElementById("edit-student-modal").classList.remove("hidden");
+            setTimeout(() => document.getElementById("edit-student-name").focus(), 100);
+        }
+
+        function closeEditStudentModal() {
+            document.getElementById("edit-student-modal").classList.add("hidden");
+        }
+
+        function handleEditStudentSubmit(e) {
+            e.preventDefault();
+            const id = document.getElementById("edit-student-id").value;
+            const newName = document.getElementById("edit-student-name").value.trim().toUpperCase();
+            if (!newName) return;
+
+            const student = db[activeClass].find(s => s.id === id);
+            if (student) {
+                student.name = newName;
+                saveData();
+                closeEditStudentModal();
+                renderTable();
+                showToast("Nama siswa berhasil diperbarui.");
+            }
+        }
+
+        function handleDeleteStudent(id, name) {
+            if (confirm(`Apakah Anda yakin ingin menghapus siswa "${name}" dari kelas ${activeClass}?`)) {
+                db[activeClass] = db[activeClass].filter(s => s.id !== id);
+                saveData();
+                renderTable();
+                showToast(`Siswa "${name}" telah dihapus.`);
+            }
+        }
+
+        function confirmResetData() {
+            if (confirm("PERINGATAN: Semua perubahan nilai dan nama siswa akan dikembalikan ke kondisi awal pabrik. Lanjutkan reset?")) {
+                db = generateDefaultDB();
+                saveData();
+                renderTable();
+                showToast("Seluruh data telah di-reset ke kondisi awal.");
+            }
+        }
+
+        function handleSearch() {
+            searchQuery = document.getElementById("search-input").value;
+            renderTable();
+        }
+
+        function exportToCSV() {
+            const studentList = db[activeClass] || [];
+            if (studentList.length === 0) {
+                showToast("Tidak ada data untuk diekspor.");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += `Rekapitulasi Nilai PAK & Budi Pekerti - Kelas ${activeClass}\n`;
+            csvContent += `Guru Pengampu: Cresto Wilhelm Waha S. Th.\n\n`;
+            csvContent += "No,Nama Siswa,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,Karakter,Mid,PAS,Nilai Akhir\n";
+
+            studentList.forEach((s, idx) => {
+                const finalScore = calculateFinalScore(s.scores) || "";
+                const row = [
+                    idx + 1,
+                    `"${s.name}"`,
+                    s.scores.T1 ?? "", s.scores.T2 ?? "", s.scores.T3 ?? "", s.scores.T4 ?? "", s.scores.T5 ?? "",
+                    s.scores.T6 ?? "", s.scores.T7 ?? "", s.scores.T8 ?? "", s.scores.T9 ?? "", s.scores.T10 ?? "",
+                    s.scores.Karakter ?? "", s.scores.Mid ?? "", s.scores.PAS ?? "",
+                    finalScore
+                ].join(",");
+                csvContent += row + "\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `Rekap_Nilai_PAK_Kelas_${activeClass}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast("File CSV berhasil diunduh.");
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById("toast");
+            document.getElementById("toast-message").textContent = msg;
+            toast.classList.remove("hidden");
+            setTimeout(() => {
+                toast.classList.add("hidden");
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
